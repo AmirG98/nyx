@@ -6,12 +6,12 @@
 
 ## ¿Qué es NYX?
 
-Agencia de crecimiento digital basada en Carlos Paz, Argentina. Trabaja con tres tipos de cliente:
+Laboratorio digital basado en Carlos Paz, Argentina. Trabaja con tres tipos de cliente:
 1. **Empresas** (e-commerce, SaaS, real estate, retail premium, financial services)
 2. **Individuos** (coaches, consultores, autores, profesionales)
 3. **ONG** (con tarifas diferenciales o pro-bono)
 
-Posicionamiento: estrategia primero, ejecución después. Anti-bullshit. Resultados medibles antes que dashboards decorativos.
+Posicionamiento: estrategia primero, ejecución después. Anti-bullshit. Resultados medibles antes que dashboards decorativos. No es una agencia de marketing — es un lab digital que cruza estrategia, tecnología y performance.
 
 ---
 
