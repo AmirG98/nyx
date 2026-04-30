@@ -69,38 +69,15 @@
     });
   }
 
-  // ────── Audit form modal ──────
-  const modal = document.getElementById('formModal');
-  const modalClose = document.getElementById('modalClose');
-  const auditForm = document.getElementById('auditForm');
-  const formSuccess = document.getElementById('formSuccess');
+  // ────── Contact form ──────
+  const contactForm = document.getElementById('contactForm');
+  const contactSuccess = document.getElementById('contactSuccess');
 
-  if (modal) {
-    document.querySelectorAll('[data-open-form]').forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    const closeModal = () => {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    };
-
-    modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
-    });
-
-    auditForm.addEventListener('submit', (e) => {
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      auditForm.style.display = 'none';
-      formSuccess.classList.add('show');
+      contactForm.style.display = 'none';
+      contactSuccess.classList.add('show');
     });
   }
 
