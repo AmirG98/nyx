@@ -143,6 +143,17 @@ img { display: block; max-width: 100%; }
   position: relative;
 }
 .nav-links a:hover { color: var(--ink); }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-contact {
+  font-size: 14px;
+  color: var(--ink-2);
+  transition: color 0.3s var(--ease);
+}
+.nav-contact:hover { color: var(--accent); }
 .nav-cta {
   display: inline-flex;
   align-items: center;
