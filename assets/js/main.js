@@ -54,6 +54,21 @@
       });
   }
 
+  // ────── Hero video smooth loop ──────
+  const heroVideo = document.querySelector('.hero-video');
+  if (heroVideo) {
+    heroVideo.addEventListener('timeupdate', () => {
+      const remaining = heroVideo.duration - heroVideo.currentTime;
+      if (remaining < 0.8) {
+        heroVideo.style.opacity = Math.max(0, remaining / 0.8);
+      } else if (heroVideo.currentTime < 0.8) {
+        heroVideo.style.opacity = Math.min(1, heroVideo.currentTime / 0.8);
+      } else {
+        heroVideo.style.opacity = 1;
+      }
+    });
+  }
+
   // ────── Audit form modal ──────
   const modal = document.getElementById('formModal');
   const modalClose = document.getElementById('modalClose');
