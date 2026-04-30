@@ -371,7 +371,7 @@ section { position: relative; z-index: 2; }
 .manifiesto-stats {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   border-top: 1px solid var(--line);
   padding-top: 32px;
@@ -495,7 +495,7 @@ section { position: relative; z-index: 2; }
   border-top: 1px solid var(--line);
 }
 .audiencia-logo img {
-  height: 24px;
+  height: 18px;
   width: auto;
   opacity: 0.7;
   transition: opacity 0.3s var(--ease);
