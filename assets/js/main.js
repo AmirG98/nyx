@@ -77,6 +77,9 @@
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       contactForm.style.display = 'none';
+      var info = document.querySelector('.contacto-info');
+      if (info) info.style.display = 'none';
+      contactSuccess.removeAttribute('hidden');
       contactSuccess.classList.add('show');
     });
   }

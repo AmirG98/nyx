@@ -1271,6 +1271,7 @@ footer {
   text-align: center;
   padding: 60px 20px;
 }
+.contacto-success.show[hidden] { display: block; }
 .contacto-success.show { display: block; }
 .contacto-success-icon { margin-bottom: 20px; }
 .contacto-success p {
