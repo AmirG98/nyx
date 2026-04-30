@@ -727,6 +727,35 @@ section { position: relative; z-index: 2; }
   100% { transform: translateX(-50%); }
 }
 
+/* Clientes logos */
+.clientes-logos {
+  margin-bottom: 80px;
+  text-align: center;
+}
+.clientes-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--ink-3);
+  margin-bottom: 32px;
+}
+.clientes-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.clientes-grid img {
+  height: 22px;
+  width: auto;
+  opacity: 0.6;
+  transition: opacity 0.3s var(--ease);
+}
+.clientes-grid img:hover { opacity: 1; }
+.clientes-grid img.logo-sm { height: 16px; }
+
 /* Testimonios */
 .testimonios {
   display: grid;
