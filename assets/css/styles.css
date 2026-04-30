@@ -722,6 +722,15 @@ section { position: relative; z-index: 2; }
   transition: color 0.3s var(--ease);
 }
 .logos-track span:hover { color: var(--ink); }
+.logos-track img {
+  height: 22px;
+  width: auto;
+  opacity: 0.45;
+  transition: opacity 0.3s var(--ease);
+  flex-shrink: 0;
+}
+.logos-track img:hover { opacity: 0.8; }
+.logos-track img.logo-sm { height: 16px; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
