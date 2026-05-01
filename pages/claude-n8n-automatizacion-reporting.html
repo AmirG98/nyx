@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude, n8n y un equipo de 4 — NYX Digital Lab</title>
+  <meta name="description" content="Caso real: cómo automatizamos el 60% del reporting con Claude y n8n. Con prompts y nodos." />
+
+  <meta property="og:title" content="Claude, n8n y un equipo de 4 — NYX Digital Lab" />
+  <meta property="og:description" content="Cómo automatizamos el 60% del reporting con IA y workflows." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <div class="container nav-inner">
+    <a href="../" class="logo">
+      <svg class="logo-mark" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="13" stroke-width="1"/>
+        <path d="M6 22 L14 6 L22 22" stroke-width="1" fill="none"/>
+        <circle cx="14" cy="14" r="2" fill="currentColor"/>
+      </svg>
+      <span>NYX</span>
+    </a>
+    <a href="../#contacto" class="nav-cta">
+      Auditoría gratuita
+      <svg class="nav-cta-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 6 H10 M6 2 L10 6 L6 10" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<article class="post">
+  <div class="container post-container">
+
+    <a href="../#blog" class="post-back">← Volver al diario</a>
+
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="cat">IA & Tech</span>
+        <span>7 min de lectura · 2 abril 2026</span>
+      </div>
+      <h1>Claude, n8n y un equipo de 4: cómo automatizamos el 60% del <em>reporting.</em></h1>
+    </div>
+
+    <div class="post-body">
+
+      <p class="post-lead">Somos un equipo de cuatro personas. Manejamos más de 30 cuentas activas. Hasta hace seis meses, el reporting nos comía entre 15 y 20 horas semanales. Hoy nos lleva menos de 6. Esto es lo que hicimos.</p>
+
+      <h2>El problema: reportes que nadie lee con gusto</h2>
+
+      <p>Los reportes de marketing suelen tener dos problemas. Primero, tardan demasiado en armarse — extraer datos de Meta, Google, GA4, el CRM, cruzarlos, darles formato, escribir los insights. Segundo, cuando llegan al cliente, la mitad de los números no se entienden sin contexto.</p>
+
+      <p>No queríamos un dashboard más. Queríamos reportes que <strong>digan algo</strong> — que interpreten los datos y sugieran acciones. Eso necesita inteligencia, no solo automatización.</p>
+
+      <h2>La arquitectura: n8n como orquestador, Claude como cerebro</h2>
+
+      <p>El flujo es simple:</p>
+
+      <ol>
+        <li><strong>Extracción:</strong> n8n se conecta a las APIs de Meta Ads, Google Ads, GA4 y el CRM del cliente. Corre todos los lunes a las 7am.</li>
+        <li><strong>Normalización:</strong> un nodo de n8n limpia y estructura los datos en un formato consistente — JSON con métricas clave, comparación vs. semana anterior, vs. mismo período del mes pasado.</li>
+        <li><strong>Análisis:</strong> ese JSON se manda a Claude con un prompt que le pide tres cosas: resumen ejecutivo en 3 líneas, top 3 métricas que cambiaron y por qué, y una recomendación de acción para la semana.</li>
+        <li><strong>Entrega:</strong> el output de Claude se formatea en un template HTML y se envía por email al cliente. Una copia va a Slack interno.</li>
+      </ol>
+
+      <h2>Qué se puede tercerizar a la IA (y qué no)</h2>
+
+      <p><strong>Sí se puede:</strong></p>
+      <ul>
+        <li>Resumir datos y detectar variaciones significativas.</li>
+        <li>Escribir insights en lenguaje claro, sin jerga.</li>
+        <li>Comparar períodos y señalar tendencias.</li>
+        <li>Generar borradores de recomendaciones basadas en patrones.</li>
+      </ul>
+
+      <p><strong>No se puede (todavía):</strong></p>
+      <ul>
+        <li>Entender el contexto del negocio que no está en los datos. Si el cliente lanzó un producto nuevo, Claude no lo sabe a menos que se lo digas.</li>
+        <li>Tomar decisiones de presupuesto. Puede sugerir, pero la decisión es humana.</li>
+        <li>Detectar problemas de tracking. Si el pixel está roto, los datos que llegan son basura y Claude los analiza como si fueran reales.</li>
+      </ul>
+
+      <h2>Resultados concretos</h2>
+
+      <p>Después de 6 meses con el sistema corriendo:</p>
+      <ul>
+        <li><strong>60% menos de tiempo</strong> en reporting (de ~18 horas semanales a ~6).</li>
+        <li><strong>100% de los reportes</strong> se envían el mismo día, sin atrasos.</li>
+        <li>Tres clientes nos dijeron que es el primer reporte que leen completo.</li>
+        <li>El equipo usa las horas liberadas en optimización real — no en formatear tablas.</li>
+      </ul>
+
+      <h2>Lo que aprendimos</h2>
+
+      <p>La automatización con IA no reemplaza al equipo — <strong>le cambia el trabajo</strong>. En lugar de extraer datos y formatear slides, ahora revisamos los análisis de Claude, los corregimos donde haga falta, y dedicamos tiempo a pensar en estrategia.</p>
+
+      <p>El prompt importa más que la herramienta. Pasamos dos semanas iterando el prompt hasta que los insights dejaron de ser genéricos. La clave fue darle contexto del negocio en el system prompt y ejemplos de buenos insights previos.</p>
+
+      <div class="post-cta">
+        <p>¿Querés automatizar procesos en tu operación? <a href="../#contacto">Hablemos</a> — te mostramos qué se puede hacer con tu stack actual.</p>
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© MMXXVI · NYX Digital Lab</span>
+      <span>Hecho con cuidado · remoto · global</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
