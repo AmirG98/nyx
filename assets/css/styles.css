@@ -887,23 +887,12 @@ section { position: relative; z-index: 2; }
 }
 .miembro-photo {
   aspect-ratio: 4 / 5;
-  background: var(--bg-2);
-  border-radius: 4px;
   position: relative;
   overflow: hidden;
 }
 
 /* Portrait — SVG placeholder or real photo */
 .miembro-photo svg, .miembro-photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
-.miembro-photo::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 50%, var(--bg) 100%);
-  opacity: 0.6;
-  transition: opacity 0.4s var(--ease);
-}
-.miembro:hover .miembro-photo::after { opacity: 0.85; }
 
 .miembro-linkedin {
   position: absolute;
