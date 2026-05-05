@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo triplicamos los donantes recurrentes de una ONG — NYX Digital Lab</title>
+  <meta name="description" content="Caso real: de donaciones esporádicas a un sistema de giving recurrente. Qué hicimos, qué funcionó y qué no." />
+
+  <meta property="og:title" content="Cómo triplicamos los donantes recurrentes de una ONG — NYX Digital Lab" />
+  <meta property="og:description" content="De donaciones esporádicas a un sistema de giving recurrente." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav scrolled">
+  <div class="container nav-inner">
+    <a href="../" class="logo">
+      <svg class="logo-mark" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="14" r="13" stroke-width="1"/>
+        <path d="M6 22 L14 6 L22 22" stroke-width="1" fill="none"/>
+        <circle cx="14" cy="14" r="2" fill="currentColor"/>
+      </svg>
+      <span>NYX</span>
+    </a>
+    <a href="../#contacto" class="nav-cta">
+      Auditoría gratuita
+      <svg class="nav-cta-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+        <path d="M2 6 H10 M6 2 L10 6 L6 10" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<article class="post">
+  <div class="container post-container">
+
+    <a href="../#blog" class="post-back">← Volver al diario</a>
+
+    <div class="post-header">
+      <div class="post-meta">
+        <span class="cat">Impacto</span>
+        <span>8 min de lectura · 24 febrero 2026</span>
+      </div>
+      <h1>Cómo triplicamos los donantes recurrentes de una <em>ONG.</em></h1>
+    </div>
+
+    <div class="post-body">
+
+      <p class="post-lead">Una ONG de derechos animales en Argentina nos pidió ayuda con una urgencia concreta: las donaciones eran esporádicas, dependían de campañas puntuales, y no había forma de proyectar ingresos. Seis meses después, los donantes recurrentes habían crecido un 340%. Este es el caso completo.</p>
+
+      <h2>El diagnóstico: mucha emoción, poco sistema</h2>
+
+      <p>La ONG tenía una comunidad fiel en redes. Miles de seguidores, engagement alto, mucha empatía con la causa. Pero cuando se trataba de convertir esa empatía en una donación mensual, el sistema fallaba en tres puntos:</p>
+
+      <ul>
+        <li><strong>La página de donación era un formulario genérico</strong> — sin contexto, sin storytelling, sin opciones claras de monto.</li>
+        <li><strong>No había seguimiento post-donación.</strong> Alguien donaba una vez y no recibía nada más. Ni agradecimiento, ni update, ni recordatorio.</li>
+        <li><strong>Los medios de pago eran limitados.</strong> Solo transferencia bancaria y un link de Mercado Pago sin integrar.</li>
+      </ul>
+
+      <h2>Lo que construimos</h2>
+
+      <p><strong>1. Nueva página de donación.</strong> Diseñamos una landing específica con tres niveles de donación (con nombres, no montos abstractos), impacto visible por cada nivel ("con $2.000/mes alimentás a un animal rescatado durante 30 días"), y testimonios de donantes actuales.</p>
+
+      <p><strong>2. Integración de pagos.</strong> Mercado Pago integrado con suscripción recurrente automática. El donante elige el monto, ingresa la tarjeta, y se debita cada mes sin intervención manual. También sumamos transferencia con CBU y QR para los que prefieren ese canal.</p>
+
+      <p><strong>3. Secuencia de bienvenida.</strong> Automatizamos con Brevo una secuencia de 5 emails post-primera-donación: agradecimiento inmediato, historia de un animal rescatado, video del equipo, reporte de impacto del mes, y pedido de compartir con un amigo.</p>
+
+      <p><strong>4. Sistema de retención.</strong> Email mensual con update de impacto real: cuántos animales se rescataron, cuánto se gastó, fotos nuevas. Transparencia total. Cuando un pago falla, se envía un recordatorio automático amigable antes de perder al donante.</p>
+
+      <h2>Los números</h2>
+
+      <ul>
+        <li><strong>+340% en donantes recurrentes</strong> en 6 meses (de 45 a 198).</li>
+        <li><strong>Donación promedio mensual +28%</strong> — de $1.800 a $2.300, gracias a los niveles con impacto visible.</li>
+        <li><strong>Tasa de retención del 82%</strong> a los 3 meses (benchmark del sector: ~60%).</li>
+        <li><strong>32% de nuevos donantes</strong> llegaron por referidos de la secuencia de bienvenida.</li>
+      </ul>
+
+      <h2>Lo que aprendimos sobre donaciones digitales</h2>
+
+      <p><strong>La gente quiere dar. Lo que falta es el sistema.</strong> La causa ya existía, la comunidad ya estaba. Lo que no existía era el puente entre "me importa" y "dono todos los meses". Ese puente es tecnología + comunicación + seguimiento.</p>
+
+      <p><strong>Los montos sugeridos importan más de lo que pensás.</strong> Cuando pasamos de un campo libre ("ingresá el monto") a tres opciones con nombre e impacto, la conversión subió un 45%. La gente necesita contexto para decidir.</p>
+
+      <p><strong>El agradecimiento no es cortesía — es retención.</strong> El email de agradecimiento inmediato tiene un open rate del 89%. Es el momento de mayor conexión emocional con el donante. Desperdiciarlo con un "gracias por tu donación" genérico es tirar la oportunidad.</p>
+
+      <div class="post-cta">
+        <p>¿Tu organización necesita un sistema de donaciones que funcione? <a href="../#contacto">Contactanos</a> — trabajamos con tarifas diferenciales para ONG.</p>
+      </div>
+
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© MMXXVI · NYX Digital Lab</span>
+      <span>Hecho con cuidado · remoto · global</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
