@@ -877,7 +877,7 @@ section { position: relative; z-index: 2; }
 .equipo { padding-bottom: 120px; }
 .equipo-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
 .miembro {
@@ -940,6 +940,9 @@ section { position: relative; z-index: 2; }
 }
 
 @media (max-width: 1024px) {
+  .equipo-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
   .equipo-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 540px) {
