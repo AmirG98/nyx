@@ -118,18 +118,11 @@ img { display: block; max-width: 100%; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 24px;
-  letter-spacing: 0.02em;
 }
-.logo-mark {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
+.logo-img {
+  height: 24px;
+  width: auto;
 }
-.logo-mark circle, .logo-mark path { stroke: var(--ink); }
 .nav-links {
   display: flex;
   gap: 36px;
