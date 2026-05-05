@@ -884,7 +884,6 @@ section { position: relative; z-index: 2; }
   display: flex;
   flex-direction: column;
   gap: 16px;
-  cursor: pointer;
 }
 .miembro-photo {
   aspect-ratio: 4 / 5;
@@ -897,8 +896,8 @@ section { position: relative; z-index: 2; }
 }
 .miembro:hover .miembro-photo { border-color: var(--accent); }
 
-/* Stylized portrait — abstract geometric */
-.miembro-photo svg { width: 100%; height: 100%; display: block; }
+/* Portrait — SVG placeholder or real photo */
+.miembro-photo svg, .miembro-photo img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .miembro-photo::after {
   content: '';
   position: absolute;
