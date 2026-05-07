@@ -506,6 +506,46 @@ section { position: relative; z-index: 2; }
   transition: color 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .audiencia-list li:hover::after { color: var(--accent); transform: translateX(4px); }
+.servicio-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: auto;
+}
+.servicio-card {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  padding: 24px 20px;
+  text-align: center;
+  transition: border-color 0.3s var(--ease);
+}
+.servicio-card:hover {
+  border-color: var(--accent);
+}
+.servicio-card h4 {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.servicio-tags {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+.servicio-tags em {
+  color: var(--accent);
+  font-style: normal;
+  margin: 0 2px;
+}
+@media (max-width: 540px) {
+  .servicio-cards { grid-template-columns: 1fr; }
+}
 .audiencia-case {
   font-family: var(--serif);
   font-style: italic;
