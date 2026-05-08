@@ -533,41 +533,48 @@ section { position: relative; z-index: 2; }
 .ia-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
 }
 .ia-card {
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  padding: 32px 28px;
-  transition: border-color 0.3s var(--ease);
+  background: var(--bg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s var(--ease);
 }
-.ia-card:hover { border-color: var(--accent); }
+.ia-card:hover { background: var(--bg-2); }
 .ia-card-label {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .ia-card h4 {
-  font-family: var(--sans);
-  font-size: 16px;
-  font-weight: 600;
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400;
+  font-style: italic;
   color: var(--ink);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .ia-card p {
   font-size: 14px;
   color: var(--ink-2);
   line-height: 1.6;
-  margin-bottom: 16px;
+  margin-bottom: auto;
+  padding-bottom: 20px;
 }
 .ia-card-tools {
   font-family: var(--mono);
   font-size: 11px;
   color: var(--ink-3);
   letter-spacing: 0.02em;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
 }
 .ia-card-tools em {
   color: var(--accent);
