@@ -556,7 +556,6 @@ section { position: relative; z-index: 2; }
 /* SUPER IA */
 .super-ia {
   padding: 100px 0;
-  border-top: 1px solid var(--line);
 }
 .super-ia .section-title { margin-bottom: 16px; }
 .super-ia-intro {
