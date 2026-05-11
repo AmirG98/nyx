@@ -437,6 +437,45 @@ section { position: relative; z-index: 2; }
   border-radius: 2px;
   overflow: hidden;
 }
+
+/* Qué hacemos — grilla de servicios */
+.que-hacemos { padding: 100px 0; }
+.que-hacemos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 56px;
+}
+.qh-card {
+  background: var(--bg);
+  padding: 40px 32px;
+  transition: background 0.3s var(--ease);
+}
+.qh-card:hover { background: var(--bg-2); }
+.qh-card h4 {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.qh-card p {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 768px) {
+  .que-hacemos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .que-hacemos-grid { grid-template-columns: 1fr; }
+}
+
 .audiencia {
   background: var(--bg);
   padding: 48px 36px;
