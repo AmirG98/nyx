@@ -905,7 +905,7 @@ section { position: relative; z-index: 2; }
 }
 .logos-track span:hover { color: var(--ink); }
 .logos-track img {
-  height: 42px;
+  height: 56px;
   width: auto;
   opacity: 0.45;
   transition: opacity 0.3s var(--ease);
