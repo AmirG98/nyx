@@ -913,6 +913,7 @@ section { position: relative; z-index: 2; }
 }
 .logos-track img:hover { opacity: 0.8; }
 .logos-track img.logo-sm { height: 16px; }
+.logos-track img.logo-lg { height: 80px; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
