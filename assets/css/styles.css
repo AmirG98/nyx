@@ -888,7 +888,6 @@ section { position: relative; z-index: 2; }
 .logos-bar {
   margin: 40px 0 80px;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   padding: 36px 0;
   overflow: hidden;
   position: relative;
