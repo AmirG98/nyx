@@ -470,6 +470,8 @@ section { position: relative; z-index: 2; }
 }
 @media (max-width: 768px) {
   .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 24px; }
+  .servicios-cta { margin-top: 24px; padding: 24px; }
+  .servicios-cta-text { font-size: 16px; }
 }
 @media (max-width: 480px) {
   .que-hacemos-grid { grid-template-columns: 1fr !important; }
@@ -636,7 +638,7 @@ section { position: relative; z-index: 2; }
 @media (max-width: 768px) {
   .ia-layout { grid-template-columns: 1fr; }
   .ia-grid { grid-template-columns: 1fr; }
-  .ia-video iframe { min-height: 500px; }
+  .ia-video { display: none; }
 }
 .servicio-cards {
   display: grid;
