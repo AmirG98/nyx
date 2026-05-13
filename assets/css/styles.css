@@ -470,8 +470,9 @@ section { position: relative; z-index: 2; }
 }
 @media (max-width: 768px) {
   .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 24px; }
-  .servicios-cta { margin-top: 24px; padding: 24px; }
+  .servicios-cta { margin-top: 16px; margin-bottom: 0; padding: 20px; }
   .servicios-cta-text { font-size: 16px; }
+  .qh-card { padding: 24px 20px; }
 }
 @media (max-width: 480px) {
   .que-hacemos-grid { grid-template-columns: 1fr !important; }
@@ -1593,12 +1594,12 @@ footer {
 /* ───────── MOBILE: reducir espacios ───────── */
 @media (max-width: 768px) {
   .section-head {
-    padding-top: 32px;
-    margin-bottom: 24px;
-    gap: 16px;
+    padding-top: 24px;
+    margin-bottom: 16px;
+    gap: 12px;
   }
-  .que-hacemos { padding: 24px 0; }
-  .super-ia { padding: 24px 0; }
+  .que-hacemos { padding: 16px 0; }
+  .super-ia { padding: 16px 0; }
   .audiencias { padding-bottom: 32px; }
   .resultados { padding-bottom: 32px; }
   .servicios { padding-bottom: 32px; }
