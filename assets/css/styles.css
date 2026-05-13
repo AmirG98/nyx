@@ -469,7 +469,9 @@ section { position: relative; z-index: 2; }
   letter-spacing: 0.02em;
 }
 @media (max-width: 768px) {
-  .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .que-hacemos { padding: 48px 0; }
+  .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 32px; }
+  .super-ia { padding: 48px 0; }
 }
 @media (max-width: 480px) {
   .que-hacemos-grid { grid-template-columns: 1fr !important; }
@@ -1587,3 +1589,18 @@ footer {
   .cursor { opacity: 1; }
 }
 .cursor.grow { width: 32px; height: 32px; opacity: 0.4; }
+
+/* ───────── MOBILE: reducir espacios ───────── */
+@media (max-width: 768px) {
+  .section-head {
+    padding-top: 60px;
+    margin-bottom: 40px;
+  }
+  .audiencias { padding-bottom: 60px; }
+  .resultados { padding-bottom: 60px; }
+  .servicios { padding-bottom: 60px; }
+  .equipo { padding-bottom: 60px; }
+  .blog { padding-bottom: 60px; }
+  .contacto { padding-bottom: 60px; }
+  .manifiesto { padding-bottom: 60px; }
+}
