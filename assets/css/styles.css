@@ -469,9 +469,7 @@ section { position: relative; z-index: 2; }
   letter-spacing: 0.02em;
 }
 @media (max-width: 768px) {
-  .que-hacemos { padding: 48px 0; }
-  .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 32px; }
-  .super-ia { padding: 48px 0; }
+  .que-hacemos-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; margin-bottom: 24px; }
 }
 @media (max-width: 480px) {
   .que-hacemos-grid { grid-template-columns: 1fr !important; }
@@ -1593,14 +1591,18 @@ footer {
 /* ───────── MOBILE: reducir espacios ───────── */
 @media (max-width: 768px) {
   .section-head {
-    padding-top: 60px;
-    margin-bottom: 40px;
+    padding-top: 32px;
+    margin-bottom: 24px;
+    gap: 16px;
   }
-  .audiencias { padding-bottom: 60px; }
-  .resultados { padding-bottom: 60px; }
-  .servicios { padding-bottom: 60px; }
-  .equipo { padding-bottom: 60px; }
-  .blog { padding-bottom: 60px; }
-  .contacto { padding-bottom: 60px; }
-  .manifiesto { padding-bottom: 60px; }
+  .que-hacemos { padding: 24px 0; }
+  .super-ia { padding: 24px 0; }
+  .audiencias { padding-bottom: 32px; }
+  .resultados { padding-bottom: 32px; }
+  .servicios { padding-bottom: 32px; }
+  .equipo { padding-bottom: 32px; }
+  .blog { padding-bottom: 32px; }
+  .contacto { padding-bottom: 32px; }
+  .manifiesto { padding-bottom: 32px; }
+  .newsletter-section { padding: 40px 0; }
 }
