@@ -640,7 +640,8 @@ section { position: relative; z-index: 2; }
 @media (max-width: 768px) {
   .ia-layout { grid-template-columns: 1fr; }
   .ia-grid { grid-template-columns: 1fr; }
-  .ia-video video { min-height: 400px; }
+  .ia-video { min-height: auto; }
+  .ia-video video { width: 100%; height: auto; min-height: auto; object-fit: contain; }
 }
 .servicio-cards {
   display: grid;
