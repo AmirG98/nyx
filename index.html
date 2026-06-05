@@ -169,11 +169,11 @@
       <h2 class="section-title reveal">Inteligencia artificial aplicada a <em>resultados.</em></h2>
     </div>
 
-    <p class="super-ia-intro reveal">
-      No hablamos de IA porque está de moda. La usamos para que nuestros clientes <em>hagan más con menos</em>: menos horas operativas, más velocidad de ejecución.
-    </p>
-
     <div class="ia-layout reveal">
+
+      <div class="ia-video">
+        <video src="assets/img/super-ia-video.mp4" autoplay muted loop playsinline></video>
+      </div>
 
       <div class="ia-grid">
 
@@ -213,10 +213,6 @@
           <p>Implementamos la infraestructura técnica para que la IA funcione en producción, no en demos.</p>
         </div>
 
-      </div>
-
-      <div class="ia-video">
-        <video src="assets/img/super-ia-video.mp4" autoplay muted loop playsinline></video>
       </div>
 
     </div>
@@ -305,12 +301,12 @@
         <div class="caso-num"><em>+520</em><span class="unit">%</span></div>
         <div class="caso-metric">Tráfico orgánico en 90 días</div>
         <div class="caso-desc">
-          Renovación integral de la presencia digital de <strong>Liz Solari</strong>. Nuevo sitio, estrategia de contenido, redes y sistema de captación.
+          Renovación integral de la presencia digital de una <strong>reconocida celebridad</strong>. Nuevo sitio, estrategia de contenido, redes y sistema de captación.
         </div>
       </div>
 
       <div class="caso reveal">
-        <div class="caso-tag"><span>Caso 03</span><span>ECORA / E-COMMERCE</span></div>
+        <div class="caso-tag"><span>Caso 03</span><span>E-COMMERCE</span></div>
         <div class="caso-num"><em>+210</em><span class="unit">%</span></div>
         <div class="caso-metric">Ventas online en 6 meses</div>
         <div class="caso-desc">
@@ -324,45 +320,25 @@
     <div class="logos-bar">
       <div class="logos-track">
         <img src="assets/img/ecora-logo.png" alt="Ecora" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/vielorie-logo.png" alt="Vie Lorie">
-        <span>—</span>
         <img src="assets/img/ohm-logo.png" alt="OHM Fitness">
-        <span>—</span>
         <img src="assets/img/iqinstitute-logo.png" alt="IQ Institute" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/bedtime-logo.png" alt="BedTime">
-        <span>—</span>
         <img src="assets/img/giantpartners-logo.png" alt="Giant Partners" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/kitchenkoncierge-logo.png" alt="Kitchen Koncierge">
-        <span>—</span>
         <img src="assets/img/realtycapital-logo.png" alt="Realty Capital Financial" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/sintientes-logo.png" alt="Sintientes">
-        <span>—</span>
         <img src="assets/img/omnia-logo.png" alt="Omnia">
-        <span>—</span>
         <img src="assets/img/ecora-logo.png" alt="Ecora" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/vielorie-logo.png" alt="Vie Lorie">
-        <span>—</span>
         <img src="assets/img/ohm-logo.png" alt="OHM Fitness">
-        <span>—</span>
         <img src="assets/img/iqinstitute-logo.png" alt="IQ Institute" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/bedtime-logo.png" alt="BedTime">
-        <span>—</span>
         <img src="assets/img/giantpartners-logo.png" alt="Giant Partners" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/kitchenkoncierge-logo.png" alt="Kitchen Koncierge">
-        <span>—</span>
         <img src="assets/img/realtycapital-logo.png" alt="Realty Capital Financial" class="logo-lg">
-        <span>—</span>
         <img src="assets/img/sintientes-logo.png" alt="Sintientes">
-        <span>—</span>
         <img src="assets/img/omnia-logo.png" alt="Omnia">
-        <span>—</span>
       </div>
     </div>
 
@@ -387,8 +363,8 @@
         <div class="testimonio-meta">
           <div class="testimonio-avatar">L</div>
           <div>
-            <div class="testimonio-name">Liz Solari</div>
-            <div class="testimonio-role">Actriz · Marca personal</div>
+            <div class="testimonio-name">Reconocida celebridad</div>
+            <div class="testimonio-role">Marca personal</div>
           </div>
         </div>
       </div>
@@ -589,8 +565,8 @@
           <input type="email" id="contact-email" name="email" required placeholder="tu@email.com">
         </div>
         <div class="form-field">
-          <label for="contact-industry">Industria</label>
-          <input type="text" id="contact-industry" name="industry" required placeholder="E-commerce, SaaS, coaching, ONG...">
+          <label for="contact-industry">Industria <span class="form-optional">(opcional)</span></label>
+          <input type="text" id="contact-industry" name="industry" placeholder="E-commerce, SaaS, coaching, ONG...">
         </div>
         <div class="form-field">
           <label for="contact-website">Sitio web <span class="form-optional">(opcional)</span></label>
@@ -631,7 +607,7 @@
   <div class="container">
     <div class="newsletter-block reveal">
       <h3>Recibí ideas que funcionan.</h3>
-      <p>Estrategia, casos reales y herramientas. Sin spam, sin relleno. Un email por semana.</p>
+      <p>Estrategia, casos reales y herramientas.<br>Sin spam, sin relleno. Un email por semana.</p>
       <form class="newsletter newsletter-lg">
         <input type="email" placeholder="tu@email.com" required>
         <button type="submit">Suscribirse</button>
@@ -702,6 +678,17 @@
   </div>
 </footer>
 
+<script>
+  // Locale detection — redirect English browsers to /en
+  (function() {
+    if (sessionStorage.getItem('lang-chosen')) return;
+    var lang = navigator.language || navigator.userLanguage || '';
+    if (lang.substring(0, 2) === 'en') {
+      sessionStorage.setItem('lang-chosen', 'en');
+      window.location.replace('/en');
+    }
+  })();
+</script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

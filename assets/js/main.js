@@ -91,7 +91,7 @@
       e.preventDefault();
       const input = newsletter.querySelector('input');
       input.value = '';
-      input.placeholder = 'Gracias. Nos leemos.';
+      input.placeholder = document.documentElement.lang === 'en' ? 'Thanks. See you soon.' : 'Gracias. Nos leemos.';
     });
   }
 })();
