@@ -927,12 +927,11 @@ section { position: relative; z-index: 2; }
 .logos-track img {
   height: 56px;
   width: auto;
-  opacity: 0.6;
-  filter: grayscale(1) brightness(1.5);
-  transition: opacity 0.3s var(--ease), filter 0.3s var(--ease);
+  opacity: 0.5;
+  transition: opacity 0.3s var(--ease);
   flex-shrink: 0;
 }
-.logos-track img:hover { opacity: 1; filter: grayscale(0) brightness(1); }
+.logos-track img:hover { opacity: 0.85; }
 .logos-track img.logo-sm { height: 16px; }
 .logos-track img.logo-lg { height: 80px; }
 @keyframes marquee {
