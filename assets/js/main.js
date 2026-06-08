@@ -69,6 +69,9 @@
     });
   }
 
+  // ────── Google Sheets webhook ──────
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxXMWTlneb1RcpL3p7twja0DbmWrb9v7lfoMw4b6xaV20-SYxrATdXHUjB7goy5pN_9Ig/exec';
+
   // ────── Contact form ──────
   const contactForm = document.getElementById('contactForm');
   const contactSuccess = document.getElementById('contactSuccess');
@@ -76,22 +79,50 @@
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      contactForm.style.display = 'none';
-      var links = document.querySelector('.contacto-links');
-      if (links) links.style.display = 'none';
-      contactSuccess.removeAttribute('hidden');
-      contactSuccess.classList.add('show');
+      var btn = contactForm.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+
+      var data = {
+        type: 'contact',
+        name: contactForm.querySelector('[name="name"]').value,
+        email: contactForm.querySelector('[name="email"]').value,
+        industry: contactForm.querySelector('[name="industry"]').value,
+        website: contactForm.querySelector('[name="website"]').value,
+        whatsapp: contactForm.querySelector('[name="whatsapp"]').value
+      };
+
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      }).finally(function() {
+        contactForm.style.display = 'none';
+        var links = document.querySelector('.contacto-links');
+        if (links) links.style.display = 'none';
+        contactSuccess.removeAttribute('hidden');
+        contactSuccess.classList.add('show');
+      });
     });
   }
 
-  // ────── Newsletter (placeholder behavior) ──────
-  const newsletter = document.querySelector('.newsletter');
-  if (newsletter) {
+  // ────── Newsletter ──────
+  var newsletters = document.querySelectorAll('.newsletter');
+  newsletters.forEach(function(newsletter) {
     newsletter.addEventListener('submit', (e) => {
       e.preventDefault();
       const input = newsletter.querySelector('input');
-      input.value = '';
-      input.placeholder = document.documentElement.lang === 'en' ? 'Thanks. See you soon.' : 'Gracias. Nos leemos.';
+      var email = input.value;
+
+      fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'newsletter', email: email })
+      }).finally(function() {
+        input.value = '';
+        input.placeholder = document.documentElement.lang === 'en' ? 'Thanks. See you soon.' : 'Gracias. Nos leemos.';
+      });
     });
-  }
+  });
 })();
