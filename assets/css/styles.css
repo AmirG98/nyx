@@ -893,7 +893,7 @@ section { position: relative; z-index: 2; }
 .logos-bar {
   margin: 40px 0 0;
   border-top: 1px solid var(--line);
-  padding: 36px 0;
+  padding: 36px 0 16px;
   overflow: hidden;
   position: relative;
 }
