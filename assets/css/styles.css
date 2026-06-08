@@ -807,7 +807,7 @@ section { position: relative; z-index: 2; }
 }
 
 /* ───────── RESULTADOS ───────── */
-.resultados { padding-bottom: 120px; }
+.resultados { padding-bottom: 80px; }
 .casos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -933,8 +933,8 @@ section { position: relative; z-index: 2; }
   flex-shrink: 0;
 }
 .logos-track img:hover { opacity: 1; }
-.logos-track img.logo-sm { height: 16px; }
-.logos-track img.logo-lg { height: 80px; }
+.logos-track img.logo-sq { height: 90px; }
+.logos-track img.logo-tall { height: 72px; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
