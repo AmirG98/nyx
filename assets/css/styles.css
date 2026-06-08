@@ -933,8 +933,14 @@ section { position: relative; z-index: 2; }
   flex-shrink: 0;
 }
 .logos-track img:hover { opacity: 1; }
-.logos-track img.logo-sq { height: 90px; }
-.logos-track img.logo-tall { height: 72px; }
+.logos-track img[alt="OHM Fitness"]              { height: 40px; }
+.logos-track img[alt="IQ Institute"]              { height: 36px; }
+.logos-track img[alt="BedTime"]                   { height: 32px; }
+.logos-track img[alt="Realty Capital Financial"]   { height: 48px; }
+.logos-track img[alt="Sintientes"]                { height: 28px; }
+.logos-track img[alt="MedIA News"]                { height: 48px; }
+.logos-track img[alt="Ecora"]                     { height: 28px; }
+.logos-track img[alt="Vie Lorie"]                 { height: 48px; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
