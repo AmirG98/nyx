@@ -70,7 +70,7 @@
   }
 
   // ────── Google Sheets webhook ──────
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxXMWTlneb1RcpL3p7twja0DbmWrb9v7lfoMw4b6xaV20-SYxrATdXHUjB7goy5pN_9Ig/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwWRXeiI_r7EMBxe6uaut4gjw5AhWJbJx4NiU702rztrM52WWQk2lF1PPz49vmPF7G-6g/exec';
 
   function sendToSheet(data) {
     var params = new URLSearchParams(data);
