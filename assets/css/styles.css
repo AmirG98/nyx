@@ -909,6 +909,7 @@ section { position: relative; z-index: 2; }
 .logos-bar::after { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
 .logos-track {
   display: flex;
+  align-items: center;
   gap: 80px;
   animation: marquee 40s linear infinite;
   width: max-content;
