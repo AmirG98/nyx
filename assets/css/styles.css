@@ -463,7 +463,7 @@ section { position: relative; z-index: 2; }
 }
 .qh-card p {
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 14px;
   color: var(--ink-2);
   line-height: 1.8;
   letter-spacing: 0.02em;
@@ -558,7 +558,7 @@ section { position: relative; z-index: 2; }
 
 /* SUPER IA */
 .super-ia {
-  padding: 100px 0;
+  padding: 60px 0 100px;
 }
 .super-ia .section-title { margin-bottom: 16px; }
 .super-ia-intro {
@@ -927,11 +927,12 @@ section { position: relative; z-index: 2; }
 .logos-track img {
   height: 56px;
   width: auto;
-  opacity: 0.45;
-  transition: opacity 0.3s var(--ease);
+  opacity: 0.6;
+  filter: grayscale(1) brightness(1.5);
+  transition: opacity 0.3s var(--ease), filter 0.3s var(--ease);
   flex-shrink: 0;
 }
-.logos-track img:hover { opacity: 0.8; }
+.logos-track img:hover { opacity: 1; filter: grayscale(0) brightness(1); }
 .logos-track img.logo-sm { height: 16px; }
 .logos-track img.logo-lg { height: 80px; }
 @keyframes marquee {
