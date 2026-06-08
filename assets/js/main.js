@@ -72,6 +72,11 @@
   // ────── Google Sheets webhook ──────
   const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxXMWTlneb1RcpL3p7twja0DbmWrb9v7lfoMw4b6xaV20-SYxrATdXHUjB7goy5pN_9Ig/exec';
 
+  function sendToSheet(data) {
+    var params = new URLSearchParams(data);
+    return fetch(SHEET_URL + '?' + params.toString(), { method: 'GET', mode: 'no-cors' });
+  }
+
   // ────── Contact form ──────
   const contactForm = document.getElementById('contactForm');
   const contactSuccess = document.getElementById('contactSuccess');
@@ -82,20 +87,13 @@
       var btn = contactForm.querySelector('button[type="submit"]');
       if (btn) btn.disabled = true;
 
-      var data = {
+      sendToSheet({
         type: 'contact',
         name: contactForm.querySelector('[name="name"]').value,
         email: contactForm.querySelector('[name="email"]').value,
         industry: contactForm.querySelector('[name="industry"]').value,
         website: contactForm.querySelector('[name="website"]').value,
         whatsapp: contactForm.querySelector('[name="whatsapp"]').value
-      };
-
-      fetch(SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
       }).finally(function() {
         contactForm.style.display = 'none';
         var links = document.querySelector('.contacto-links');
@@ -112,14 +110,8 @@
     newsletter.addEventListener('submit', (e) => {
       e.preventDefault();
       const input = newsletter.querySelector('input');
-      var email = input.value;
 
-      fetch(SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'newsletter', email: email })
-      }).finally(function() {
+      sendToSheet({ type: 'newsletter', email: input.value }).finally(function() {
         input.value = '';
         input.placeholder = document.documentElement.lang === 'en' ? 'Thanks. See you soon.' : 'Gracias. Nos leemos.';
       });
