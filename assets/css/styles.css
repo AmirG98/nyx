@@ -944,6 +944,8 @@ section { position: relative; z-index: 2; }
 .logos-track img[alt="MedIA News"]                { height: 48px; }
 .logos-track img[alt="Ecora"]                     { height: 28px; }
 .logos-track img[alt="Vie Lorie"]                 { height: 48px; }
+.logos-track img[alt="Econews"]                   { height: 28px; }
+.logos-track img[alt="Ecohouse"]                  { height: 52px; }
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
